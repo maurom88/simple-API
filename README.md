@@ -4,4 +4,9 @@ This app was created by following Tania Rascia's tutorial at https://www.taniara
 
 ---
 
-To complete the JavaScript exercise, go to the `broken-app` branch and follow the instructions in the README.md file
+1. Find why nothing is being displayed on the page. <br>
+<details>
+  <summary>Hint:</summary>
+  Inspect the browser's console
+</details>
+1. 
