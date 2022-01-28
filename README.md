@@ -9,12 +9,14 @@ This app was created by following Tania Rascia's tutorial at https://www.taniara
   <summary>Hint:</summary>
   Inspect the browser's console
 </details>
-1. Each card should display the name of the character at the top. Why isn't it?
+
+2. Each card should display the name of the character at the top. Why isn't it?
 <details>
   <summary>Hint:</summary>
   Maybe some styling?
 </details>
-1. Add eye color and hair color for each character
+
+3. Add eye color and hair color for each character
 <details>
   <summary>Hint:</summary>
   Copy and adapt the code in the script.js file
