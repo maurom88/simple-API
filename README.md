@@ -14,3 +14,8 @@ This app was created by following Tania Rascia's tutorial at https://www.taniara
   <summary>Hint:</summary>
   Maybe some styling?
 </details>
+1. Add eye color and hair color for each character
+<details>
+  <summary>Hint:</summary>
+  Copy and adapt the code in the script.js file
+</details>
