@@ -4,6 +4,8 @@ This app was created by following Tania Rascia's tutorial at https://www.taniara
 
 ---
 
+Clone the repository to your computer, then follow the instructions below:
+
 1. Find why nothing is being displayed on the page. <br>
 <details>
   <summary>Hint:</summary>
