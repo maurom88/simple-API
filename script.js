@@ -39,7 +39,8 @@ function showPageContent() {
 
   function handleFetchError() {
     const error = document.createElement("p");
-    error.textContent = "Error fetching data, please try again";
+    error.textContent = "Error fetching data, something seems to be wrong with the source API.";
+    showPeople(placeholderPeople);
     container.appendChild(error);
   }
 
@@ -48,3 +49,21 @@ function showPageContent() {
     .then((data) => showPeople(data))
     .catch(handleFetchError);
 }
+
+const placeholderPeople = [
+  {
+    name: "Placeholder name 1",
+    age: 42,
+    gender: "Placeholder gender 1",
+  },
+  {
+    name: "Placeholder name 2",
+    age: 42,
+    gender: "Placeholder gender 2",
+  },
+  {
+    name: "Placeholder name 3",
+    age: 42,
+    gender: "Placeholder gender 3",
+  },
+];
