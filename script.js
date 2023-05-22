@@ -1,50 +1,70 @@
-document.addEventListener("DOMContentLoaded", showPageContent(), false);
+document.addEventListener("DOMContentLoaded", showPidContent(), false);
 
-function showPageContent() {
-  const url = "https://ghibliapi.herokuapp.com/people";
+function showPidContent() {
+  const url = "https://jsonplaceholder.typicode.com/posts";
 
   const container = document.querySelector("main");
 
-  function showPeople(people) {
-    people.forEach((person) => {
-      // create div to contain person's info
+  function showPosts(posts) {
+    posts.forEach((post) => {
+      // create div to contain post's info
       const card = document.createElement("div");
       card.setAttribute("class", "card");
 
-      // create elements with person's name, age, gender
-      const name = document.createElement("h2");
-      name.textContent = person.name;
+      // create elements with post's title, id, body
+      const title = document.createElement("h2");
+      title.textContent = post.title;
 
-      const age = document.createElement("p");
-      age.textContent = "Age: ";
-      const ageVal = document.createElement("span");
-      ageVal.textContent = person.age;
+      const id = document.createElement("p");
+      id.textContent = "id: ";
+      const idVal = document.createElement("span");
+      idVal.textContent = post.id;
 
-      const gender = document.createElement("p");
-      gender.textContent = "Gender: ";
-      const genderVal = document.createElement("span");
-      genderVal.textContent = person.gender;
+      const body = document.createElement("p");
+      body.textContent = "body: ";
+      const bodyVal = document.createElement("span");
+      bodyVal.textContent = post.body;
 
       // append card to container
       container.appendChild(card);
 
-      // append person name, age and gender to card
-      card.appendChild(name);
-      card.appendChild(age);
-      age.appendChild(ageVal);
-      card.appendChild(gender);
-      gender.appendChild(genderVal);
+      // append post title, id and body to card
+      card.appendChild(title);
+      card.appendChild(id);
+      id.appendChild(idVal);
+      card.appendChild(body);
+      body.appendChild(bodyVal);
     });
   }
 
   function handleFetchError() {
     const error = document.createElement("p");
-    error.textContent = "Error fetching data, please try again";
+    error.textContent =
+      "Error fetching data, something seems to be wrong with the source API.";
+    showPosts(placeholderPosts);
     container.appendChild(error);
   }
 
   fetch(url)
     .then((response) => response.json())
-    .then((data) => showPeople(data))
+    .then((data) => showPosts(data))
     .catch(handleFetchError);
 }
+
+const placeholderPosts = [
+  {
+    title: "Placeholder title 1",
+    id: 40,
+    body: "Placeholder body 1",
+  },
+  {
+    title: "Placeholder title 2",
+    id: 41,
+    body: "Placeholder body 2",
+  },
+  {
+    title: "Placeholder title 3",
+    id: 42,
+    body: "Placeholder body 3",
+  },
+];
